@@ -11,7 +11,7 @@
     
 <?php
 
-
+// primo array
 $navbar = [
 
     'intro' => 'Introduzione',
@@ -21,6 +21,7 @@ $navbar = [
     'questions' => 'Domande Frequenti',
 ];
 
+// secondo array
 $googleFaq = [
 
     [
@@ -57,27 +58,38 @@ $googleFaq = [
     ],
 ];
 ?>
-
+<!-- inserisco il logo della pagina -->
 <div class="container-logo">
     <img src="https://www.deuxexmachina.it/wp-content/uploads/2017/03/Google-logo.png" alt="ciao">
     <span>Termini di servizio</span>
 </div>
 
 <?php
-
+// ciclo tramite il foreach per ottenere il valore delle chiavi del primo array
 foreach ($navbar as $value) {
     // echo $value;
 ?>
-
-<div>
+<!-- stampo il risultato del ciclo foreach -->
 <a href="#"><?= $value ?></a>
-</div>
-
 
 <?php
 }
+
+// ciclo tramite il foreach per ottenere il valore delle chiavi del secondo array
+foreach ($googleFaq as $question){
 ?>
 
+<div class='title'>
+<h3><?= $question['title'] ?></h3>
+<p><?= $question['paragraph'] ?></p>
+</div>
+
+<?php
+}
+
+
+
+?>
     
 </body>
 </html>
